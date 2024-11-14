@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="header">
+      <h1>Employee Dashboard</h1>
+      <p>Welcome! Submit your complaint and stay updated on its status.</p>
+    </header>
+    
+    <div class="complaint-section">
+      <h2>Submit a New Complaint</h2>
+      <div class="complaint-form">
+        <img src="assets/complaint-icon.png" alt="Complaint Icon" class="icon">
+        <form id="complaintForm">
+          <input type="text" id="complaintTitle" placeholder="Complaint Title" required>
+          <select id="complaintType" required>
+            <option value="">Select Complaint Type</option>
+            <option value="Technical Issue">Technical Issue</option>
+            <option value="HR Issue">HR Issue</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="date" id="complaintDate" required>
+          <button type="submit">Submit Complaint</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="complaint-list">
+      <h2>My Complaints</h2>
+      <table id="complaintsTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Complaints will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
